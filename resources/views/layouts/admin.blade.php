@@ -23,7 +23,9 @@
 
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="btn-group" style="width: 60px">
+        <span>Welcome {{ $user->name }}</span>
+        <div class="btn-group d-flex" style="width: 60px">
+
             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="https://res.cloudinary.com/dpjpz26qm/image/upload/v1674890312/codepen/avatar/man_1_cpqkhl.png"
                     class="img-fluid" alt="" style="width: 35px;">
