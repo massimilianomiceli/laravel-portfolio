@@ -23,7 +23,6 @@
 
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <span>Welcome {{ $user->name }}</span>
         <div class="btn-group d-flex" style="width: 60px">
 
             <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
