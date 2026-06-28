@@ -30,9 +30,10 @@
                     class="img-fluid" alt="" style="width: 35px;">
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{ url('dashboard') }}"><i class='bx bxs-widget'></i> Dashboard</a>
+                <li><a class="dropdown-item" href="{{ route('dashboard') }}"><i class='bx bxs-widget'></i> Dashboard</a>
                 </li>
-                <li><a class="dropdown-item" href="{{ url('profile') }}"><i class='bx bx-user-circle'></i> Profile</a>
+                <li><a class="dropdown-item" href="{{ route('profile.edit') }}"><i class='bx bx-user-circle'></i>
+                        Profile</a>
                 </li>
                 <li><a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
@@ -51,16 +52,16 @@
                 <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i><span
                         class="nav_logo-name">Laravel Portfolio</span> </a>
                 <div class="nav_list">
-                    <a href="{{ url('dashboard') }}" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i>
+                    <a href="{{ route('dashboard') }}" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i>
                         <span class="nav_name">Dashboard</span> </a>
-                    <a href="{{ url('profile') }}" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span
+                    <a href="{{ route('profile.edit') }}" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span
                             class="nav_name">Users</span> </a>
                     <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span
                             class="nav_name">Messages</span> </a>
                     <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span
                             class="nav_name">Bookmark</span> </a>
-                    <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span
-                            class="nav_name">Files</span> </a>
+                    <a href="{{ route('projects.index') }}" class="nav_link"> <i class='bx bx-folder nav_icon'></i>
+                        <span class="nav_name">Files</span> </a>
                     <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span
                             class="nav_name">Stats</span> </a>
                 </div>

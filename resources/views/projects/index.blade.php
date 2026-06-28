@@ -22,7 +22,8 @@
                 <tbody>
                     @foreach ($projects as $project)
                         <tr>
-                            <th scope="row">{{ $project->id }}</th>
+                            <th scope="row"><a href="{{ route('projects.show', $project->id) }}">{{ $project->id }}</a>
+                            </th>
                             <td>{{ $project->name }}</td>
                             <td>{{ $project->customer }}</td>
                             <td>{{ $project->period_start }}</td>
