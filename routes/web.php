@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectController;
 
 //Pagina iniziale del sito, non serve essere loggati per vederla
 Route::get('/', function () {
@@ -37,5 +38,7 @@ Route::middleware(['auth','verified']) //Tutte le rotte dentro questo gruppo son
 ->group(function () {
     Route::get("/", [DashboardController::class,'index'])->name("index");
 });
+
+Route::resource("projects", ProjectController::class);
 
 require __DIR__.'/auth.php';
