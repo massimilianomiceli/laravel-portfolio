@@ -94,19 +94,19 @@
                         Edit
                     </a>
                     <!-- Pulsante apertura modale -->
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
                         Delete project
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
                         aria-hidden="true">
 
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
 
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">
+                                    <h5 class="modal-title" id="deleteModalLabel">
                                         Delete project
                                     </h5>
 

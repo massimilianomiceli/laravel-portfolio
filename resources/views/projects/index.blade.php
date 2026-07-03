@@ -31,6 +31,7 @@
                             <th scope="col">Customer</th>
                             <th scope="col">Start</th>
                             <th scope="col">End</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
 
@@ -57,6 +58,57 @@
 
                                 <td>
                                     {{ $project->period_end }}
+                                </td>
+                                <td>
+                                    <a href="{{ route('projects.edit', $project) }}" class="btn btn-edit-custom">
+                                        Edit
+                                    </a>
+
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#deleteModal{{ $project->id }}">
+                                        Delete
+                                    </button>
+
+                                    <div class="modal fade" id="deleteModal{{ $project->id }}" tabindex="-1"
+                                        aria-labelledby="deleteModalLabel{{ $project->id }}" aria-hidden="true">
+
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deleteModalLabel{{ $project->id }}">
+                                                        Delete project
+                                                    </h5>
+
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close">
+                                                    </button>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete
+                                                    <strong>{{ $project->name }}</strong>?
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">
+                                                        Cancel
+                                                    </button>
+
+                                                    <form action="{{ route('projects.destroy', $project) }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+
+                                                        <button type="submit" class="btn btn-danger">
+                                                            Delete
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach
