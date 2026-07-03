@@ -38,7 +38,8 @@
                                 Name
                             </label>
 
-                            <input type="text" class="form-control project-input" name="name" id="name">
+                            <input type="text" class="form-control project-input" name="name" id="name" required
+                                minlength="3" maxlength="100">
                         </div>
 
                         <div class="col-12 col-md-6">
@@ -46,7 +47,8 @@
                                 Customer
                             </label>
 
-                            <input type="text" class="form-control project-input" name="customer" id="customer">
+                            <input type="text" class="form-control project-input" name="customer" id="customer"
+                                minlength="2" maxlength="150">
                         </div>
 
                         <div class="col-12 col-md-6">
@@ -54,7 +56,8 @@
                                 Start date
                             </label>
 
-                            <input type="date" class="form-control project-input" name="period_start" id="period_start">
+                            <input type="date" class="form-control project-input" name="period_start" id="period_start"
+                                required>
                         </div>
 
                         <div class="col-12 col-md-6">
@@ -73,7 +76,7 @@
                             </label>
 
                             <textarea class="form-control project-input project-textarea" placeholder="Briefly describe your project" name="summary"
-                                id="summary"></textarea>
+                                id="summary" required minlength="10" maxlength="1000"></textarea>
                         </div>
                     </div>
 
