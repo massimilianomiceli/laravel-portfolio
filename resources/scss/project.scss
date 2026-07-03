@@ -1,4 +1,6 @@
-.project-show {
+.project-show,
+.project-create,
+.project-index {
     .project-title {
         color: #172033;
         font-weight: 600;
@@ -12,67 +14,68 @@
         border: 0;
         border-radius: 14px;
         overflow: hidden;
+        background-color: #ffffff;
         box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
     }
 
     .project-card-header {
-        background-color: #071b3a;
-        color: #ffffff;
         padding: 1rem 1.25rem;
+        color: #ffffff;
+        background-color: #071b3a;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .project-card-body {
+        padding: 1.75rem 1.5rem 1.5rem;
     }
 
     .project-label {
+        margin-bottom: 0.5rem;
         color: #6c757d;
         font-size: 0.75rem;
+        font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.04em;
-        font-weight: 600;
     }
 
-    .project-value {
-        color: #172033;
-        font-size: 1.05rem;
-    }
-
-    .project-summary {
-        background-color: #f6f7fb;
-        border-left: 4px solid #9b8cff;
-        color: #273142;
-        border-radius: 10px;
-        padding: 1rem;
+    .project-divider {
+        height: 1px;
+        margin-bottom: 1.5rem;
+        background-color: #e5e7eb;
     }
 
     .btn-back {
-        background-color: #eef1f6;
         color: #172033;
+        background-color: #eef1f6;
         border: 1px solid #d8dde8;
 
         &:hover {
-            background-color: #dfe4ee;
             color: #071b3a;
+            background-color: #dfe4ee;
         }
     }
 
     .btn-edit-custom {
-        background-color: #9b8cff;
         color: #ffffff;
+        background-color: #9b8cff;
         border: 1px solid #9b8cff;
 
         &:hover {
+            color: #ffffff;
             background-color: #8373f5;
             border-color: #8373f5;
-            color: #ffffff;
         }
     }
 
     .btn-outline-custom {
-        border-color: #c3c8d4;
         color: #5f6b7a;
+        border-color: #c3c8d4;
 
         &:hover {
+            color: #ffffff;
             background-color: #071b3a;
             border-color: #071b3a;
-            color: #ffffff;
         }
     }
 }
