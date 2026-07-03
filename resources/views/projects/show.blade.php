@@ -79,15 +79,9 @@
                     </div>
 
                     <div class="project-summary">
-                        @if ($project->summary)
-                            <p class="mb-0">
-                                {{ $project->summary }}
-                            </p>
-                        @else
-                            <p class="text-muted mb-0">
-                                Nessun summary disponibile.
-                            </p>
-                        @endif
+                        <p class="mb-0">
+                            {{ $project->summary }}
+                        </p>
                     </div>
                 </div>
 
@@ -97,7 +91,7 @@
                     </a>
 
                     <a href="{{ route('projects.edit', $project) }}" class="btn btn-edit-custom">
-                        Modifica
+                        Edit
                     </a>
                 </div>
 

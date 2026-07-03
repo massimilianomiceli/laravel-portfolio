@@ -76,7 +76,7 @@
                             </label>
 
                             <textarea class="form-control project-input project-textarea" placeholder="Briefly describe your project" name="summary"
-                                id="summary" required minlength="10" maxlength="1000"></textarea>
+                                id="summary" required minlength="10" maxlength="1000" rows="5"></textarea>
                         </div>
                     </div>
 
