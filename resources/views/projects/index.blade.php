@@ -12,14 +12,14 @@
                 Projects
             </h2>
 
-            <a href="{{ route('projects.create') }}" class="btn btn-add-custom">
+            <a href="{{ route('projects.create') }}" class="btn btn-outline-custom">
                 + Add Project
             </a>
         </div>
 
         <div class="project-card">
             <div class="project-card-header">
-                Elenco progetti
+                List of projects
             </div>
 
             <div class="table-responsive">

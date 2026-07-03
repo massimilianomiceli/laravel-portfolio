@@ -78,4 +78,19 @@
             border-color: #071b3a;
         }
     }
+
+    .project-link {
+        color: #9b8cff;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            color: #8373f5;
+            text-decoration: underline;
+        }
+
+        &:focus {
+            color: #8373f5;
+        }
+    }
 }

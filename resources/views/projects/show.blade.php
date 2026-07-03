@@ -18,14 +18,14 @@
             </div>
 
             <a href="{{ route('projects.index') }}" class="btn btn-outline-custom">
-                Torna ai progetti
+                Go back
             </a>
         </div>
 
         <div class="card project-card">
             <div class="project-card-header">
                 <h5 class="mb-0">
-                    Informazioni progetto
+                    Project information
                 </h5>
             </div>
 
@@ -34,7 +34,7 @@
                 <div class="row mb-4">
                     <div class="col-md-6 mb-3">
                         <div class="project-label mb-2">
-                            Nome progetto
+                            Name
                         </div>
                         <p class="project-value mb-0">
                             {{ $project->name }}
@@ -43,7 +43,7 @@
 
                     <div class="col-md-6 mb-3">
                         <div class="project-label mb-2">
-                            Cliente
+                            Customer
                         </div>
                         <p class="project-value mb-0">
                             {{ $project->customer }}
@@ -54,7 +54,7 @@
                 <div class="row mb-4">
                     <div class="col-md-6 mb-3">
                         <div class="project-label mb-2">
-                            Data inizio
+                            Start date
                         </div>
                         <p class="project-value mb-0">
                             {{ $project->period_start }}
@@ -63,7 +63,7 @@
 
                     <div class="col-md-6 mb-3">
                         <div class="project-label mb-2">
-                            Data fine
+                            End date
                         </div>
                         <p class="project-value mb-0">
                             {{ $project->period_end }}
@@ -93,7 +93,7 @@
 
                 <div class="d-flex gap-2">
                     <a href="{{ route('projects.index') }}" class="btn btn-back">
-                        Indietro
+                        Go back
                     </a>
 
                     <a href="{{ route('projects.edit', $project) }}" class="btn btn-edit-custom">

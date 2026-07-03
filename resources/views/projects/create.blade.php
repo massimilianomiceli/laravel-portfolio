@@ -18,14 +18,14 @@
                 </p>
             </div>
 
-            <a href="{{ route('projects.index') }}" class="btn btn-outline-secondary">
-                Torna ai progetti
+            <a href="{{ route('projects.index') }}" class="btn btn-outline-custom">
+                Go back
             </a>
         </div>
 
         <div class="project-card">
             <div class="project-card-header">
-                Informazioni progetto
+                Project information
             </div>
 
             <div class="project-card-body">
@@ -79,11 +79,11 @@
 
                     <div class="d-flex mt-4 gap-2">
                         <a href="{{ route('projects.index') }}" class="btn btn-back">
-                            Indietro
+                            Go back
                         </a>
 
-                        <button type="submit" class="btn btn-primary">
-                            Submit
+                        <button type="submit" class="btn btn-edit-custom">
+                            Add
                         </button>
                     </div>
                 </form>
