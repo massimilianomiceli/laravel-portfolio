@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\TypeController;
 
 //Pagina iniziale del sito, non serve essere loggati per vederla
 Route::get('/', function () {
@@ -40,6 +41,6 @@ Route::middleware(['auth','verified']) //Tutte le rotte dentro questo gruppo son
 });
 
 Route::resource("projects", ProjectController::class); //->middleware(['auth','verified']);
-Route::resource("types", ProjectController::class); //->middleware(['auth','verified']);
+Route::resource("types", TypeController::class); //->middleware(['auth','verified']);
 
 require __DIR__.'/auth.php';

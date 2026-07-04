@@ -58,10 +58,10 @@
                             class="nav_name">Users</span> </a>
                     <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span
                             class="nav_name">Messages</span> </a>
-                    <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span
-                            class="nav_name">Bookmark</span> </a>
+                    <a href="{{ route('types.index') }}" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span
+                            class="nav_name">Types</span> </a>
                     <a href="{{ route('projects.index') }}" class="nav_link"> <i class='bx bx-folder nav_icon'></i>
-                        <span class="nav_name">Files</span> </a>
+                        <span class="nav_name">Projects</span> </a>
                     <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span
                             class="nav_name">Stats</span> </a>
                 </div>
