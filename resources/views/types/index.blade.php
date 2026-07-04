@@ -12,7 +12,7 @@
                 Types
             </h2>
 
-            <a href="{{ route('projects.create') }}" class="btn btn-outline-custom">
+            <a href="{{ route('types.create') }}" class="btn btn-outline-custom">
                 + Add Type
             </a>
         </div>
