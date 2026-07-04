@@ -70,6 +70,21 @@
                                 value="{{ $project->period_end }}">
                         </div>
 
+                        <div class="col-12 col-md-6">
+                            <label for="type_id" class="form-label project-label">
+                                Type
+                            </label>
+
+                            <select name="type_id" id="type_id" class="form-control project-input">
+                                @foreach ($types as $type)
+                                    <option value="{{ $type->id }}"
+                                        {{ $project->type_id == $type->id ? 'selected' : '' }}>
+                                        {{ $type->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+
                         <div class="col-12">
                             <div class="project-divider"></div>
 
@@ -88,7 +103,7 @@
                         </a>
 
                         <button type="submit" class="btn btn-edit-custom">
-                            Edit
+                            Confirm
                         </button>
                     </div>
                 </form>

@@ -60,7 +60,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view("projects.edit", compact("project"));
+        $types = Type::all();
+        return view("projects.edit", compact("types", "project"));
     }
 
     /**
@@ -75,6 +76,7 @@ class ProjectController extends Controller
         $project->period_start = $data['period_start'];
         $project->period_end = $data['period_end'];
         $project->summary = $data['summary'];
+        $project->type_id = $data['type_id'];
 
         $project->update();
 
