@@ -39,6 +39,6 @@ Route::middleware(['auth','verified']) //Tutte le rotte dentro questo gruppo son
     Route::get("/", [DashboardController::class,'index'])->name("index");
 });
 
-Route::resource("projects", ProjectController::class) ->middleware(['auth','verified']);
+Route::resource("projects", ProjectController::class); //->middleware(['auth','verified']);
 
 require __DIR__.'/auth.php';

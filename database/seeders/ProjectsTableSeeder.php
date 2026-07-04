@@ -22,6 +22,7 @@ class ProjectsTableSeeder extends Seeder
             $endingLimit = (clone $startingPeriod)->modify('+10 weeks');
 
             $newProject->name = $faker->words(3, true);
+            $newProject->customer = $faker->company();
             $newProject->period_start = $startingPeriod->format('Y-m-d');
             $newProject->period_end = $faker
                 ->dateTimeBetween($startingPeriod, $endingLimit)
