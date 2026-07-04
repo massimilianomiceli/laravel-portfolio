@@ -68,6 +68,20 @@
                             <input type="date" class="form-control project-input" name="period_end" id="period_end">
                         </div>
 
+                        <div class="col-12 col-md-6">
+                            <label for="type_id" class="form-label project-label">
+                                Type
+                            </label>
+
+                            <select name="type_id" id="type_id" class="form-control project-input">
+                                @foreach ($types as $type)
+                                    <option value="{{ $type->id }}">
+                                        {{ $type->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+
                         <div class="col-12">
                             <div class="project-divider"></div>
 

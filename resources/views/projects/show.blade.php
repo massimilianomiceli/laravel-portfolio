@@ -71,6 +71,17 @@
                     </div>
                 </div>
 
+                <div class="row mb-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="project-label mb-2">
+                            Type
+                        </div>
+                        <p class="project-value mb-0">
+                            {{ $project->type ? $project->type->name : 'No type has been assigned to this project.' }}
+                        </p>
+                    </div>
+                </div>
+
                 <hr class="my-4">
 
                 <div class="mb-4">

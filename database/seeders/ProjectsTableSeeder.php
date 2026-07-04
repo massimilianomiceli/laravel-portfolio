@@ -28,7 +28,7 @@ class ProjectsTableSeeder extends Seeder
                 ->format('Y-m-d');
 
             $newProject->summary = $faker->paragraph(4);
-
+            $newProject->type_id = rand(1, 6);
             $newProject->save();
         }
     }
