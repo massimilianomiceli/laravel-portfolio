@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    {{ $project->name }}
+    {{ $type->name }}
 @endsection
 
 @section('content')
@@ -10,14 +10,14 @@
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
                 <h2 class="fs-3 project-title mb-1">
-                    {{ $project->name }}
+                    {{ $type->name }}
                 </h2>
                 <p class="project-subtitle mb-0">
-                    Project details #{{ $project->id }}
+                    Type details #{{ $type->id }}
                 </p>
             </div>
 
-            <a href="{{ route('projects.index') }}" class="btn btn-outline-custom">
+            <a href="{{ route('types.index') }}" class="btn btn-outline-custom">
                 Go back
             </a>
         </div>
@@ -25,7 +25,7 @@
         <div class="card project-card">
             <div class="project-card-header">
                 <h5 class="mb-0">
-                    Project information
+                    Type information
                 </h5>
             </div>
 
@@ -37,47 +37,7 @@
                             Name
                         </div>
                         <p class="project-value mb-0">
-                            {{ $project->name }}
-                        </p>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="project-label mb-2">
-                            Customer
-                        </div>
-                        <p class="project-value mb-0">
-                            {{ $project->customer }}
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row mb-4">
-                    <div class="col-md-6 mb-3">
-                        <div class="project-label mb-2">
-                            Start date
-                        </div>
-                        <p class="project-value mb-0">
-                            {{ $project->period_start }}
-                        </p>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="project-label mb-2">
-                            End date
-                        </div>
-                        <p class="project-value mb-0">
-                            {{ $project->period_end }}
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row mb-4">
-                    <div class="col-md-6 mb-3">
-                        <div class="project-label mb-2">
-                            Type
-                        </div>
-                        <p class="project-value mb-0">
-                            {{ $project->type ? $project->type->name : 'No type has been assigned to this project.' }}
+                            {{ $type->name }}
                         </p>
                     </div>
                 </div>
@@ -86,27 +46,27 @@
 
                 <div class="mb-4">
                     <div class="project-label mb-2">
-                        Summary
+                        Description
                     </div>
 
                     <div class="project-summary">
                         <p class="mb-0">
-                            {{ $project->summary }}
+                            {{ $type->description }}
                         </p>
                     </div>
                 </div>
 
                 <div class="d-flex gap-2">
-                    <a href="{{ route('projects.index') }}" class="btn btn-back">
+                    <a href="{{ route('types.index') }}" class="btn btn-back">
                         Go back
                     </a>
 
-                    <a href="{{ route('projects.edit', $project) }}" class="btn btn-edit-custom">
+                    <a href="{{ route('types.edit', $type) }}" class="btn btn-edit-custom">
                         Edit
                     </a>
                     <!-- Pulsante apertura modale -->
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                        Delete project
+                        Delete type
                     </button>
 
                     <!-- Modal -->
@@ -118,7 +78,7 @@
 
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="deleteModalLabel">
-                                        Delete project
+                                        Delete type
                                     </h5>
 
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
@@ -127,7 +87,7 @@
 
                                 <div class="modal-body">
                                     Are you sure you want to delete
-                                    <strong>{{ $project->name }}</strong>?
+                                    <strong>{{ $type->name }}</strong>?
                                 </div>
 
                                 <div class="modal-footer">
@@ -135,7 +95,7 @@
                                         Cancel
                                     </button>
 
-                                    <form action="{{ route('projects.destroy', $project) }}" method="POST">
+                                    <form action="{{ route('types.destroy', $type) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
 
