@@ -52,17 +52,24 @@ class TechnologyController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Technology $technology)
     {
-        //
+        return view("technologies.edit", compact("technology"));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Technology $technology)
     {
-        //
+        $data = $request->all();
+
+        $technology->name = $data['name'];
+        $technology->color = $data['color'];
+
+        $technology->update();
+
+        return redirect() -> route("technologies.show", $technology);
     }
 
     /**
