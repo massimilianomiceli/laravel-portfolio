@@ -13,7 +13,12 @@
                     {{ $project->name }}
                 </h2>
                 <p class="project-subtitle mb-0">
-                    Project details #{{ $project->id }}
+                    Technologies:
+                    @forelse($project->technologies as $technology)
+                        <span class="badge" style="background-color:{{ $technology->color }}">{{ $technology->name }}</span>
+                    @empty
+                        none
+                    @endforelse
                 </p>
             </div>
 
