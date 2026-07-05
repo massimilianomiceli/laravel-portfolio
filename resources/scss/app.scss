@@ -1,4 +1,8 @@
-@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
-@import "adminLayout";
-@import "project";
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Stili personalizzati
+@import "admin-layout";
+@import "navbar";

@@ -1,0 +1,336 @@
+:root {
+    --body-font: "Nunito", sans-serif;
+    --normal-font-size: 1rem;
+
+    --page-background: #f8f9fa;
+    --main-text-color: #172033;
+    --secondary-text-color: #6c757d;
+
+    --primary-dark: #071b3a;
+    --accent-color: #9b8cff;
+    --accent-color-hover: #8373f5;
+}
+
+// ======================================================
+// RESET E STILI GENERALI
+// ======================================================
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background-color: var(--page-background);
+    color: var(--main-text-color);
+
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    min-height: calc(100vh - 4rem);
+}
+
+// ======================================================
+// PAGINE ADMIN
+// ======================================================
+
+.project-show,
+.project-create,
+.project-index {
+    .project-title {
+        color: var(--main-text-color);
+        font-weight: 600;
+    }
+
+    .project-subtitle {
+        color: var(--secondary-text-color);
+    }
+
+    .project-card {
+        overflow: hidden;
+
+        border: 0;
+        border-radius: 14px;
+
+        background-color: #ffffff;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .project-card-header {
+        padding: 1rem 1.25rem;
+
+        background-color: var(--primary-dark);
+        color: #ffffff;
+
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .project-card-body {
+        padding: 1.75rem 1.5rem 1.5rem;
+    }
+
+    .project-label {
+        margin-bottom: 0.5rem;
+
+        color: var(--secondary-text-color);
+
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    .project-divider {
+        height: 1px;
+        margin-bottom: 1.5rem;
+
+        background-color: #e5e7eb;
+    }
+
+    .project-input {
+        min-height: 50px;
+        padding: 0.75rem 1rem;
+
+        border: 1px solid #dce2ea;
+        border-radius: 0.65rem;
+
+        background-color: #ffffff;
+
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+
+        &:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.2rem rgba(155, 140, 255, 0.15);
+        }
+    }
+
+    .btn-back {
+        border: 1px solid #d8dde8;
+        background-color: #eef1f6;
+        color: var(--main-text-color);
+
+        &:hover {
+            border-color: #d8dde8;
+            background-color: #dfe4ee;
+            color: var(--primary-dark);
+        }
+    }
+
+    .btn-edit-custom {
+        border: 1px solid var(--accent-color);
+        background-color: var(--accent-color);
+        color: #ffffff;
+
+        &:hover {
+            border-color: var(--accent-color-hover);
+            background-color: var(--accent-color-hover);
+            color: #ffffff;
+        }
+    }
+
+    .btn-outline-custom {
+        border-color: #c3c8d4;
+        color: #5f6b7a;
+
+        &:hover {
+            border-color: var(--primary-dark);
+            background-color: var(--primary-dark);
+            color: #ffffff;
+        }
+    }
+
+    .btn-custom {
+        border: 1px solid var(--accent-color);
+        background-color: var(--accent-color);
+        color: #ffffff;
+
+        &:hover,
+        &:focus {
+            border-color: var(--accent-color-hover);
+            background-color: var(--accent-color-hover);
+            color: #ffffff;
+        }
+    }
+
+    .project-link {
+        color: var(--accent-color);
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--accent-color-hover);
+            text-decoration: underline;
+        }
+
+        &:focus {
+            color: var(--accent-color-hover);
+        }
+    }
+}
+
+// ======================================================
+// SELETTORE COLORE
+// ======================================================
+
+.color-picker-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+
+    width: 100%;
+    min-height: 50px;
+    margin: 0;
+    padding: 0.45rem 0.75rem;
+
+    border: 1px solid #dce2ea;
+    border-radius: 0.65rem;
+
+    background-color: #ffffff;
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+
+    &:hover {
+        border-color: #b8aaff;
+        background-color: #fcfbff;
+    }
+
+    &:focus-within {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 0.2rem rgba(155, 140, 255, 0.15);
+    }
+}
+
+.project-color-input {
+    width: 44px;
+    height: 38px;
+    flex-shrink: 0;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 0.45rem;
+
+    background-color: transparent;
+    cursor: pointer;
+
+    &::-webkit-color-swatch-wrapper {
+        padding: 0;
+    }
+
+    &::-webkit-color-swatch {
+        border: 0;
+        border-radius: 0.45rem;
+    }
+
+    &::-moz-color-swatch {
+        border: 0;
+        border-radius: 0.45rem;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.color-picker-text {
+    color: #697386;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+// ======================================================
+// ANTEPRIMA COLORE TECHNOLOGY
+// ======================================================
+
+.technology-color-preview {
+    display: inline-block;
+
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.4rem;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+// ======================================================
+// AZIONI FORM
+// ======================================================
+
+.form-actions {
+    margin-top: 0.5rem;
+    padding-top: 1.5rem;
+
+    border-top: 1px solid #edf0f4;
+}
+
+// ======================================================
+// UTILITÀ GENERALI
+// ======================================================
+
+.height-100 {
+    min-height: 100vh;
+    padding-top: 25px;
+}
+
+// ======================================================
+// FOOTER
+// ======================================================
+
+footer {
+    background-color: #dcdcdd;
+
+    p {
+        margin-bottom: 0;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+// ======================================================
+// RESPONSIVE GENERALE
+// ======================================================
+
+@media screen and (max-width: 575.98px) {
+    .project-show,
+    .project-create,
+    .project-index {
+        .project-card-body {
+            padding: 1.25rem 1rem;
+        }
+
+        .project-title {
+            font-size: 1.6rem;
+        }
+
+        .form-actions {
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}
