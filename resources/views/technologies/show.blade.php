@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    {{ $type->name }}
+    {{ $technology->name }}
 @endsection
 
 @section('content')
@@ -10,11 +10,11 @@
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
                 <h2 class="fs-3 project-title mb-1">
-                    {{ $type->name }}
+                    {{ $technology->name }}
                 </h2>
             </div>
 
-            <a href="{{ route('types.index') }}" class="btn btn-outline-custom">
+            <a href="{{ route('technologies.index') }}" class="btn btn-outline-custom">
                 Go back
             </a>
         </div>
@@ -22,7 +22,7 @@
         <div class="card project-card">
             <div class="project-card-header">
                 <h5 class="mb-0">
-                    Type information
+                    Technology information
                 </h5>
             </div>
 
@@ -34,7 +34,7 @@
                             Name
                         </div>
                         <p class="project-value mb-0">
-                            {{ $type->name }}
+                            {{ $technology->name }}
                         </p>
                     </div>
                 </div>
@@ -43,27 +43,27 @@
 
                 <div class="mb-4">
                     <div class="project-label mb-2">
-                        Description
+                        Color
                     </div>
 
                     <div class="project-summary">
                         <p class="mb-0">
-                            {{ $type->description }}
+                            {{ $technology->color }}
                         </p>
                     </div>
                 </div>
 
                 <div class="d-flex gap-2">
-                    <a href="{{ route('types.index') }}" class="btn btn-back">
+                    <a href="{{ route('technologies.index') }}" class="btn btn-back">
                         Go back
                     </a>
 
-                    <a href="{{ route('types.edit', $type) }}" class="btn btn-edit-custom">
+                    <a href="{{ route('technologies.edit', $technology) }}" class="btn btn-edit-custom">
                         Edit
                     </a>
                     <!-- Pulsante apertura modale -->
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                        Delete type
+                        Delete technology
                     </button>
 
                     <!-- Modal -->
@@ -75,7 +75,7 @@
 
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="deleteModalLabel">
-                                        Delete type
+                                        Delete technology
                                     </h5>
 
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
@@ -84,7 +84,7 @@
 
                                 <div class="modal-body">
                                     Are you sure you want to delete
-                                    <strong>{{ $type->name }}</strong>?
+                                    <strong>{{ $technology->name }}</strong>?
                                 </div>
 
                                 <div class="modal-footer">
@@ -92,7 +92,7 @@
                                         Cancel
                                     </button>
 
-                                    <form action="{{ route('types.destroy', $type) }}" method="POST">
+                                    <form action="{{ route('technologies.destroy', $technology) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
 

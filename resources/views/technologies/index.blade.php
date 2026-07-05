@@ -28,6 +28,7 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
+                            <th scope="col">Color</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -43,6 +44,10 @@
 
                                 <td class="project-name">
                                     {{ $technology->name }}
+                                </td>
+
+                                <td class="project-name">
+                                    {{ $technology->color }}
                                 </td>
 
                                 <td>
