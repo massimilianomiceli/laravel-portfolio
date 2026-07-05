@@ -83,6 +83,25 @@
                         </div>
 
                         <div class="col-12">
+                            <label class="form-label project-label">
+                                Technology
+                            </label>
+
+                            <div class="tag d-flex flex-wrap gap-3">
+                                @foreach ($technologies as $technology)
+                                    <div class="d-flex align-items-center gap-2">
+                                        <input type="checkbox" name="technologies[]" value="{{ $technology->id }}"
+                                            id="tag-{{ $technology->id }}">
+
+                                        <label for="tag-{{ $technology->id }}">
+                                            {{ $technology->name }}
+                                        </label>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        <div class="col-12">
                             <div class="project-divider"></div>
 
                             <label for="summary" class="form-label project-label">

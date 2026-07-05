@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\Type;
+use App\Models\Technology;
 
 class ProjectController extends Controller
 {
@@ -24,7 +25,8 @@ class ProjectController extends Controller
     public function create()
     {
         $types = Type::all();
-        return view("projects.create", compact("types"));
+        $technologies = Technology::all();
+        return view("projects.create", compact("types", "technologies"));
     }
 
     /**
@@ -43,6 +45,8 @@ class ProjectController extends Controller
         $newProject->type_id = $data['type_id'];
 
         $newProject->save();
+
+        $newProject->technologies()->attach($data['technologies']);
 
         return redirect() -> route("projects.show", $newProject);
     }
