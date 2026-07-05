@@ -44,7 +44,6 @@
                 <li>
                     <a class="dropdown-item" href="{{ route('dashboard') }}">
                         <i class="bx bx-home-alt-2"></i>
-
                         <span>Dashboard</span>
                     </a>
                 </li>
@@ -52,7 +51,6 @@
                 <li>
                     <a class="dropdown-item" href="{{ route('profile.edit') }}">
                         <i class="bx bx-user-circle"></i>
-
                         <span>Profile</span>
                     </a>
                 </li>
@@ -68,7 +66,6 @@
                             document.getElementById('logout-form').submit();
                         ">
                         <i class="bx bx-log-out-circle"></i>
-
                         <span>Logout</span>
                     </a>
                 </li>
@@ -93,57 +90,38 @@
 
                 {{-- Navigation links --}}
                 <div class="nav_list">
-
-                    {{-- Dashboard --}}
-                    <a href="{{ route('dashboard') }}"
-                        class="nav_link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
-                        <i class="bx bx-home-alt-2 nav_icon"></i>
-
-                        <span class="nav_name">
-                            Dashboard
-                        </span>
-                    </a>
-
                     {{-- Projects --}}
                     <a href="{{ route('projects.index') }}"
                         class="nav_link {{ request()->routeIs('projects.*') ? 'active' : '' }}">
                         <i class="bx bx-briefcase-alt-2 nav_icon"></i>
-
                         <span class="nav_name">
                             Projects
                         </span>
                     </a>
-
                     {{-- Technologies --}}
                     <a href="{{ route('technologies.index') }}"
                         class="nav_link {{ request()->routeIs('technologies.*') ? 'active' : '' }}">
                         <i class="bx bx-code-alt nav_icon"></i>
-
                         <span class="nav_name">
                             Technologies
                         </span>
                     </a>
-
                     {{-- Types --}}
                     <a href="{{ route('types.index') }}"
                         class="nav_link {{ request()->routeIs('types.*') ? 'active' : '' }}">
                         <i class="bx bx-category-alt nav_icon"></i>
-
                         <span class="nav_name">
                             Types
                         </span>
                     </a>
-
                     {{-- Profile --}}
                     <a href="{{ route('profile.edit') }}"
                         class="nav_link {{ request()->routeIs('profile.*') ? 'active' : '' }}">
                         <i class="bx bx-user-circle nav_icon"></i>
-
                         <span class="nav_name">
                             Profile
                         </span>
                     </a>
-
                 </div>
             </div>
 
