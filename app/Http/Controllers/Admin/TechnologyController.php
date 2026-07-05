@@ -22,7 +22,7 @@ class TechnologyController extends Controller
      */
     public function create()
     {
-        //
+        return view("technologies.create");
     }
 
     /**
@@ -30,7 +30,15 @@ class TechnologyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newTechnology = new Technology();
+        $newTechnology->name = $data['name'];
+        $newTechnology->color = $data['color'];
+
+        $newTechnology->save();
+
+        return redirect() -> route("technologies.show", $newTechnology);
     }
 
     /**

@@ -47,9 +47,14 @@
                     </div>
 
                     <div class="project-summary">
-                        <p class="mb-0">
-                            {{ $technology->color }}
-                        </p>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="technology-color-preview" style="background-color: {{ $technology->color }};"
+                                title="{{ $technology->color }}"></span>
+
+                            <p class="mb-0">
+                                {{ $technology->color }}
+                            </p>
+                        </div>
                     </div>
                 </div>
 

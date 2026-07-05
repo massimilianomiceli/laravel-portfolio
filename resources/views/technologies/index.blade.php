@@ -47,7 +47,15 @@
                                 </td>
 
                                 <td class="project-name">
-                                    {{ $technology->color }}
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="technology-color-preview"
+                                            style="background-color: {{ $technology->color }};"
+                                            title="{{ $technology->color }}"></span>
+
+                                        <span>
+                                            {{ $technology->color }}
+                                        </span>
+                                    </div>
                                 </td>
 
                                 <td>
