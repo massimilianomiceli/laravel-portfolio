@@ -9,3 +9,5 @@ use App\Http\Controllers\Api\ProjectController;
 })->middleware('auth:sanctum'); */
 
 Route::get("projects", [ProjectController::class,'index']);
+
+Route::get("projects/{project}", [ProjectController::class,'show']);
